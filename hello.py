@@ -21,3 +21,4 @@ df = df.withColumn("_ingested_at", F.current_timestamp())
 
 df.write.mode("overwrite").option("mergeSchema", "true").saveAsTable(f"{catalog}.bronze.tag_readings")
 print(f"wrote {df.count()} rows to {catalog}.bronze.tag_readings")
+print("test data written")
